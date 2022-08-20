@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Starting 100-process_and_pid_file in the terminal #0 and then killing it in the terminal #1
+trap "echo \"Y U no love me?!\"; exit" SIGINT
+trap "sudo rm /var/run/myscript.pid; exit" SIGQUIT
+trap "echo \"I hate the kill command\"; sudo rm /var/run/myscript.pid; exit" SIGTERM
+
+echo "$$" > /var/run/myscript.pid
+
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+done
