@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# display and Write a Bash script that displays all active IPv4 IPs on the machin.
+
+ifconfig | grep -Eo 'inet ([0-9]{1,3}\.?){4}' | cut -d ' ' -f 2
