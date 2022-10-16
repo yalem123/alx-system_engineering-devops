@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# configure our vm connect to a server without typing a password
+
+IdentityFile ~/.ssh/school
+PasswordAuthentication no
