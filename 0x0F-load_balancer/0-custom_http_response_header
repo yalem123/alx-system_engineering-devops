@@ -5,18 +5,11 @@
 #+     at the root with a curl GET request.
 #+    Contains a custom HTTP header named X-Served-By.
 
-apt-get update
+apt-get -y update
 apt-get install -y nginx
 
-mkdir -p /var/www/html
-touch /var/www/html/index.html
-echo "Hello World!" > /var/www/html/index.html
+sed -i "11i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+echo "Hello World!" | tee /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
 
-printf %s "server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    listen [::]:80 default_server;
-    root   /var/www/html;
-    index  index.html index.htm;
-    }
-service nginx restart
+service nginx start
