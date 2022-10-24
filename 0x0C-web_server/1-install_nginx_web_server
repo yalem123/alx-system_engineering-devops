@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Installs Nginx with the following configurations:
 #+    Listens on port 80.
-#+    Returns a page containing "Holberton School" when querie
-sudo apt-get update
+#+    Returns a page containing "Hello world" when querie
+sudo apt-get update -y
 sudo apt-get install -y nginx
 sudo chown -R ubuntu /var/www
 echo "Hello World" > /var/www/html/index.nginx-debian.html
