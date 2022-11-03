@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # Start apache2 service
 apt-get update
 apt-get install apache2
