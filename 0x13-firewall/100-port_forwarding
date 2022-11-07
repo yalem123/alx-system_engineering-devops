@@ -1,3 +1,77 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Rules that should be run before the ufw command line added rules. Custom
 # rules should be added to one of these chains:
 #   ufw-before-input
@@ -72,5 +146,9 @@
 
 # allow MULTICAST UPnP for service discovery (be sure the MULTICAST line above
 # is uncommented)
--A ufw-before-input -p udp -d 239.255.255.250 --dport 1900 -j ACCEPT
+-A ufw-before-input -p udp -d gg
+
+
+
+
 
