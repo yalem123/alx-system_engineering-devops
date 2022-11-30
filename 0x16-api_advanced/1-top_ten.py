@@ -8,19 +8,15 @@ import sys
 
 
 def top_ten(subreddit):
-    """
-    return the 1st 10 hot posts
-    """
-    u_agent = 'mozila/5.0'
+    """ Queries to Reddit API """
+    u_agent = 'Mozilla/5.0'
 
-    header = {
-            
-            'User_Agent': u_agent
+    headers = {
+        'User-Agent': u_agent
     }
 
     params = {
-
-            'limits': 10
+        'limit': 10
     }
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
